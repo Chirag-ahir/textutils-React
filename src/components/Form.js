@@ -24,13 +24,13 @@ function Form(props) {
     <>
       <div>
         <h3>{props.heading}</h3>
-        <textarea className="form-control" onChange={handleOnChange} value={text} rows="7"/>
-        <button className='btn btn-primary my-3' onClick={handleUpClick}>Convert to Uppercase</button>      
-        <button className='btn btn-primary my-3 mx-2' onClick={handleDbClick}>Convert to Lowercase</button>
-        <button className='btn btn-danger my-3' onClick={clearText}>Clear Text</button>
+        <textarea className="form-control" onChange={handleOnChange} placeholder="Enter your text here" rows="7"/>
+        <button className='btn btn-primary my-2' onClick={handleUpClick}>Convert to Uppercase</button>      
+        <button className='btn btn-primary my-2 mx-2' onClick={handleDbClick}>Convert to Lowercase</button>
+        <button className='btn btn-danger my-2' onClick={clearText}>Clear Text</button>
       </div>
     
-      <div className='container my-2'>
+      <div className=' my-3'>
         <h3>Your Text Summary</h3>
         <p>{text.split(" ").length-1} words and {text.length} characters</p>
         <p>{0.008*text.split("").length} Minutes read</p>

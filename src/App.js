@@ -9,7 +9,7 @@ function App() {
 
     <>
       <Navbar title="TextUtils - React App" aboutText="About TextUtils" contact="Contact Us" />
-      <div className="container my-5">
+      <div className="my-5 mx-3">
         <Form heading="Enter Text To Analyze" />
       </div>
     </>
