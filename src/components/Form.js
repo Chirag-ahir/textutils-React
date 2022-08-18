@@ -11,6 +11,10 @@ function Form(props) {
     let capText = text.toLowerCase();
     setText(capText)
   }
+  const clearText = () =>{
+    let newText = "";
+    setText(newText)
+  }
   
   const handleOnChange = (event) =>{
     setText(event.target.value);
@@ -18,10 +22,22 @@ function Form(props) {
 
   return (
     <>
-      <h3>{props.heading}</h3>
-      <textarea className="form-control" onChange={handleOnChange} value={text} rows="10"/>
-      <button className='btn btn-primary my-3' onClick={handleUpClick}>Convert to Uppercase</button>      
-      <button className='btn btn-primary my-3 mx-2' onClick={handleDbClick}>Convert to Lowercase</button>
+      <div>
+        <h3>{props.heading}</h3>
+        <textarea className="form-control" onChange={handleOnChange} value={text} rows="7"/>
+        <button className='btn btn-primary my-3' onClick={handleUpClick}>Convert to Uppercase</button>      
+        <button className='btn btn-primary my-3 mx-2' onClick={handleDbClick}>Convert to Lowercase</button>
+        <button className='btn btn-danger my-3' onClick={clearText}>Clear Text</button>
+      </div>
+    
+      <div className='container my-2'>
+        <h3>Your Text Summary</h3>
+        <p>{text.split(" ").length-1} words and {text.length} characters</p>
+        <p>{0.008*text.split("").length} Minutes read</p>
+        <h4>Preview</h4>
+        <p>{text}</p>
+      </div>
+
     </>
   )
 }
