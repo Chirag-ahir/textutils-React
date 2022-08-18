@@ -25,8 +25,8 @@ function Form(props) {
       <div>
         <h3>{props.heading}</h3>
         <textarea className="form-control" onChange={handleOnChange} placeholder="Enter your text here" rows="7"/>
-        <button className='btn btn-primary my-2' onClick={handleUpClick}>Convert to Uppercase</button>      
-        <button className='btn btn-primary my-2 mx-2' onClick={handleDbClick}>Convert to Lowercase</button>
+        <button className='btn btn-primary my-2' onClick={handleUpClick}>Uppercase</button>      
+        <button className='btn btn-primary my-2 mx-2' onClick={handleDbClick}>Lowercase</button>
         <button className='btn btn-danger my-2' onClick={clearText}>Clear Text</button>
       </div>
     
