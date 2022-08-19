@@ -34,7 +34,7 @@ function Form(props) {
         <h3>Your Text Summary</h3>
         <p>{text.split(" ").length-1} words and {text.length} characters</p>
         <p>{0.008*text.split("").length} Minutes read</p>
-        <h4>Preview</h4>
+        <h4>Output Text</h4>
         <p>{text}</p>
       </div>
 
